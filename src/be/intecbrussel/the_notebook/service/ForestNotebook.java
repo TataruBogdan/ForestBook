@@ -89,15 +89,17 @@ public class ForestNotebook {
         if (animal instanceof Carnivore) {
             Carnivore carnivore = (Carnivore) animal;
             this.carnivores.add(carnivore);
-            this.animals.add(animal);
+            addToAnimalList(animal);
             System.out.println("Carnivore added");
         } else if (animal instanceof Herbivore) {
             Herbivore herbivore = (Herbivore) animal;
             this.herbivores.add(herbivore);
+            addToAnimalList(animal);
             System.out.println("Herbivore added");
         } else if (animal instanceof Omnivore) {
             Omnivore omnivore = (Omnivore) animal;
             this.omnivores.add(omnivore);
+            addToAnimalList(animal);
             System.out.println("Omnivore added");
         } else {
             System.out.println("Cannot add animal");
@@ -177,6 +179,11 @@ public class ForestNotebook {
             }
         }
         return false;
+    }
+
+    private void addToAnimalList(Animal animal) {
+        this.animals.add(animal);
+        System.out.println("Animal added");
     }
 
     public void addPlant(Plant plant) {
