@@ -17,6 +17,7 @@ public class Bush extends Plant{
     public Bush(String name, double height){
         super(name, height);
         this.fruit = ""; //
+        // LeafType not initialized ok?
     }
 
     public String getFruit() {
