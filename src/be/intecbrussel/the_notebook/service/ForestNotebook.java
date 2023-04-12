@@ -190,8 +190,9 @@ public class ForestNotebook {
 
     public void addPlant(Plant plant) {
 
-        if (plant != null) {
+        if (plant == null) {
             System.out.println("Plant cannot be added");
+            return;
         }
 
         boolean plantAlreadyExist = false;
@@ -204,6 +205,7 @@ public class ForestNotebook {
 
         if (!plantAlreadyExist) {
             this.plants.add(plant);
+            System.out.println("Plant " + plant.getName() + " added");
         } else {
             System.out.println("Plant already exist");
         }

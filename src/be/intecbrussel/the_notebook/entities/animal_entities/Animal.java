@@ -59,12 +59,13 @@ public class Animal {
 //                '}';
 //    }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return Double.compare(animal.weight, weight) == 0 && Double.compare(animal.height, height) == 0 && Double.compare(animal.length, length) == 0 && Objects.equals(name, animal.name);
+        return Objects.equals(name, animal.name);
     }
 
     @Override
