@@ -59,12 +59,14 @@ public class ForestNotebook {
 
     // TODO - the plantCount method returns the number of plants we track internally
     public int getPlantCount() {
-        return plants.size();
+        plantCount = plants.size();
+        return plantCount;
     }
 
     //TODO - the animalCount method returns the amount of animals we track internally
     public int getAnimalCount() {
-        return animals.size();
+        animalCount = animals.size();
+        return animalCount;
     }
 
     //TODO The methods of adding plants and animals must have a control mechanism.
