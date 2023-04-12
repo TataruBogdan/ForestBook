@@ -28,16 +28,4 @@ public class Tree extends Plant{
                 " leafType= " + leafType;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Tree tree = (Tree) o;
-        return leafType == tree.leafType;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(leafType);
-    }
 }

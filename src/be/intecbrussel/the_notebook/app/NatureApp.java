@@ -43,6 +43,10 @@ public class NatureApp {
         rose.setSmell(Scent.SWEET);
         myNotebook.addPlant(rose);
 
+        Flower rose2 = new Flower("Rose", 0.10);
+        rose2.setSmell(Scent.MUSKY);
+        myNotebook.addPlant(rose2);
+
         Flower monkeyFlower = new Flower("Musk", 0.30);
         monkeyFlower.setSmell(Scent.MUSKY);
         myNotebook.addPlant(monkeyFlower);

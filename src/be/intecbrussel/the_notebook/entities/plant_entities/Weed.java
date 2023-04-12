@@ -29,16 +29,4 @@ public class Weed extends Plant{
                 " area= " + area;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Weed weed = (Weed) o;
-        return Double.compare(weed.area, area) == 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(area);
-    }
 }

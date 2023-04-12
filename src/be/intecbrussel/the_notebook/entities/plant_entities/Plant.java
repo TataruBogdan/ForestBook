@@ -42,11 +42,11 @@ public class Plant {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Plant plant = (Plant) o;
-        return Double.compare(plant.height, height) == 0 && Objects.equals(name, plant.name);
+        return Objects.equals(name, plant.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, height);
+        return Objects.hash(name);
     }
 }

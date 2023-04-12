@@ -190,10 +190,22 @@ public class ForestNotebook {
 
     public void addPlant(Plant plant) {
 
-        if (!this.plants.contains(plant) && plant != null) {
+        if (plant != null) {
+            System.out.println("Plant cannot be added");
+        }
+
+        boolean plantAlreadyExist = false;
+        for (Plant foundPlant:plants) {
+            if (foundPlant.getName().equalsIgnoreCase(plant.getName())){
+                plantAlreadyExist = true;
+                break;
+            }
+        }
+
+        if (!plantAlreadyExist) {
             this.plants.add(plant);
         } else {
-            System.out.println("Cannot add plant, already exist or null");
+            System.out.println("Plant already exist");
         }
     }
 

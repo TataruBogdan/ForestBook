@@ -43,17 +43,4 @@ public class Bush extends Plant{
                 ", leafType=" + leafType;
     }
 
-    //TODO -equals must not contains also Bush name ????
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Bush bush = (Bush) o;
-        return Objects.equals(fruit, bush.fruit) && leafType == bush.leafType;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(fruit, leafType);
-    }
 }
