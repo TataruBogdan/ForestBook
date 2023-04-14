@@ -59,17 +59,21 @@ public class Animal {
 //                '}';
 //    }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Animal animal = (Animal) o;
-        return Objects.equals(name, animal.name);
+        // equals compare from String class ?
+        String objName = ((Animal) o).getName();
+        return this.getName().equals(objName);
+//        Animal animal = (Animal) o;
+//        return Objects.equals(name, animal.name);
     }
 
     @Override
+
     public int hashCode() {
-        return Objects.hash(name, weight, height, length);
+        return this.name.hashCode() + 57;
+        // return Objects.hash(name, weight, height, length);
     }
 }
